@@ -1,0 +1,40 @@
+
+body{
+    margin: 0;
+    background-color: rgb(113, 168, 150);
+}
+.nav {
+    background-color: black;
+}
+
+.navbar-link{
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.form{
+    background-color: black;
+}
+.form__label{
+    color: #fff !important;
+}
+
+.form__blockResultat{
+    display: flex !important;
+}
+.form__blockResultat-resultat{
+    background-color: rgb(113, 168, 150);
+    border: 1px solid rgb(113, 168, 150);
+}
+
+.btn__add{
+    background-color: #fff;
+    text-transform: capitalize;
+}
+
+.btn__add:hover{
+    background-color: rgb(113, 168, 150);
+}
+
