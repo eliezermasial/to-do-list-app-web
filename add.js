@@ -13,7 +13,7 @@ function ajout(){
     //ajout des class et des attribis dans les variables
     blockResult.classList.add("form__blockResultat")
     btnDelete.classList.add("btn","btn__delete","h-25")
-    labelResult.classList.add("form__blockResultat-resultat","p-2","mb-2","me-2","ms-2","mt-2","w-100")
+    labelResult.classList.add("form__blockResultat-resultat","p-2","mb-2","me-2","ms-2","mt-2","w-100","text-uppercase")
     checkbox.setAttribute("type","checkbox")
 
     btnDelete.innerHTML = "Delete"
@@ -25,18 +25,27 @@ function ajout(){
     blockResult.append(checkbox)
     container_result.append(blockResult)
 
+
     btnDelete.addEventListener("click",(e)=>{
         e.preventDefault()
         inputSaisie.focus()
         
         return blockResult.remove()
         
-        
     })
-    
-    
-    
+
+    checkbox.addEventListener("click",()=>{
+        if(checkbox.checked){
+            labelResult.style.textDecoration = "line-through"
+            inputSaisie.focus()
+        } else {
+            inputSaisie.focus()
+            return labelResult.style.textDecoration = "none"
+        }
+    })
+
 }
+
 
 /********************************
  * la gestion d'execution de l'app
